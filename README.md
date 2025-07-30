@@ -8,7 +8,7 @@ This is a simple docker image which starts up in just a few seconds and launch a
 To get it running, just copy & paste the snippet below in your terminal:
 
 ```bash
-sudo docker run -d --rm -p 443:443 -v xtls-reality-volume:/opt/xray/config --name xtls-reality myelectronix/xtls-reality
+sudo docker run -d --rm -p 443:443 -v xtls-reality-volume:/opt/xray/config --name xtls-reality sensemilla/xtls-reality
 ```
 
 The XTLS-Reality proxy server will be up and ready to accept connections on port 443.
@@ -19,12 +19,12 @@ To get more detailed information, go to [Quick Start](#-quick-start).
 
 ## Sources
 
-| Name | URL 
-| :--: | :-----: |
-| GitHub | <https://github.com/myelectronix/xtls-reality-docker> |
-| Docker Hub | <https://hub.docker.com/r/myelectronix/xtls-reality> |
-| XTLS GitHub  | <https://github.com/XTLS> |
-| Habr  | <https://habr.com/ru/articles/731608/> |
+| Name |                                                       URL                                                        
+| :--: |:----------------------------------------------------------------------------------------------------------------:|
+| GitHub | <https://github.com/myelectronix/xtls-reality-docker> <br/> <https://github.com/sen-semilla/xtls-reality-docker> |
+| Docker Hub |  <https://hub.docker.com/r/myelectronix/xtls-reality> <br/> <https://hub.docker.com/r/sensemilla/xtls-reality>   |
+| XTLS GitHub  |                                            <https://github.com/XTLS>                                             |
+| Habr  |                                      <https://habr.com/ru/articles/731608/>                                      |
 
 
 ## Container properties
@@ -65,7 +65,7 @@ You can run XTLS-reality proxy server in two ways of your choice: docker run or 
 #### 2.1. Docker run
 Pull the latest version of XTLS-reality-docker image:
 ```bash
-sudo docker pull myelectronix/xtls-reality:latest
+sudo docker pull sensemilla/xtls-reality:latest
 ```
 
 Copy & paste the following command to run XTLS-reality-docker:<br>
@@ -76,7 +76,7 @@ sudo docker run -d --rm  \
 -e SNI=YOUR_SNI \
 -e SHORT_ID=YOUR_SHORT_ID \
 -v xtls-reality-volume:/opt/xray/config \
---name xtls-reality myelectronix/xtls-reality:latest
+--name xtls-reality sensemilla/xtls-reality:latest
 ```
 
 **⚠️ Note:** You must specify the desired values instead ***YOUR_SNI*** and  ***YOUR_SHORT_ID***. You can skip these lines in the command, in this case the default values will be used.
@@ -88,7 +88,7 @@ sudo docker ps
 The output should look like this
 ```bash
 CONTAINER ID   IMAGE                       COMMAND                  CREATED         STATUS                                        PORTS                                   NAMES
-82d35a13b672   myelectronix/xtls-reality   "/bin/bash ./entrypo…"   8 seconds ago   Up 7 seconds                                  0.0.0.0:443->443/tcp, :::443->443/tcp   xtls-reality
+0e7c45766619   sensemilla/xtls-reality   "/bin/bash ./entrypo…"   8 seconds ago   Up 7 seconds                                  0.0.0.0:443->443/tcp, :::443->443/tcp   xtls-reality
  ```
 
 #### 2.2. Docker compose
@@ -97,7 +97,7 @@ The another way of start up XTLS-reality proxy-server is docker compose. Docker 
 After install docker compose plugin clone this git repository:
 
 ```bash
-git clone https://github.com/myelectronix/xtls-reality-docker
+git clone https://github.com/sen-semilla/xtls-reality-docker
 ```
 
 
@@ -116,7 +116,7 @@ sudo docker ps
 The output should look like this
 ```bash
 CONTAINER ID   IMAGE                       COMMAND                  CREATED         STATUS                                        PORTS                                   NAMES
-82d35a13b672   myelectronix/xtls-reality   "/bin/bash ./entrypo…"   8 seconds ago   Up 7 seconds                                  0.0.0.0:443->443/tcp, :::443->443/tcp   xtls-reality
+0e7c45766619   sensemilla/xtls-reality   "/bin/bash ./entrypo…"   8 seconds ago   Up 7 seconds                                  0.0.0.0:443->443/tcp, :::443->443/tcp   xtls-reality
  ```
 
  

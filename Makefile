@@ -1,5 +1,5 @@
-export XTLS_VERSION=1.8.4
-export DOCKER_REPO="myelectronix/xtls-reality"
+export XTLS_VERSION=25.7.26
+export DOCKER_REPO="sensemilla/xtls-reality"
 
 
 .PHONY: build build-local build-and-run-local
